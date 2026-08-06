@@ -26,7 +26,7 @@ class TakeAwayOrder extends FoodOrder {
     }
 }
 
-public class AbstractFoodOrder {
+public class AbstractFoodOrderDemo {
     public static void main(String[] args) {
         DineInOrder d = new DineInOrder();
         d.message();

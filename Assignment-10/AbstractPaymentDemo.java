@@ -18,7 +18,7 @@ class UPI extends Payment {
     }
 }
 
-public class AbstractPayment {
+public class AbstractPaymentDemo {
     public static void main(String[] args) {
         CreditCard c = new CreditCard();
         c.message();
