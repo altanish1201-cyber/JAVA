@@ -1,0 +1,148 @@
+10. Write a Java program to demonstrate the use of abstract classes and abstract methods.
+abstract class Shape {
+    abstract void draw();
+    void message() {
+        System.out.println("Drawing Shape");
+    }
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing Circle");
+    }
+}
+
+public class AbstractDemo {
+    public static void main(String[] args) {
+        Circle c = new Circle();
+        c.message();
+        c.draw();
+    }
+}
+
+11. Write a Java program to demonstrate the implementation of interfaces.
+interface Animal {
+    void eat();
+    void sleep();
+}
+
+class Dog implements Animal {
+    public void eat() {
+        System.out.println("Dog is eating");
+    }
+
+    public void sleep() {
+        System.out.println("Dog is sleeping");
+    }
+}
+
+public class InterfaceDemo {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();
+        d.sleep();
+    }
+}
+
+7. Implement a Java program to demonstrate inheritance and interfaces using suitable real-world examples.
+interface Vehicle {
+    void start();
+}
+
+class Car implements Vehicle {
+    public void start() {
+        System.out.println("Car is starting...");
+    }
+}
+
+class ElectricCar extends Car {
+    void charge() {
+        System.out.println("Electric Car is charging...");
+    }
+}
+
+public class InheritanceInterfaceDemo {
+    public static void main(String[] args) {
+        ElectricCar car = new ElectricCar();
+        car.start();
+        car.charge();
+    }
+}
+
+8. Write a Java program to demonstrate the use of the super keyword in inheritance.
+class Animal {
+    String name;
+    Animal(String name) {
+        this.name=name;
+    }
+    void sound() {
+        System.out.println("Animal makes sound");
+    }
+}
+
+class Dog extends Animal {
+    String name;
+    Dog(String name) {
+        this.name=name;
+        super("bird");
+    }
+    void display() {
+        System.out.println("Parent Name: " + super.name);
+        System.out.println("Child Name: " + name);
+        super.sound();
+    }
+}
+
+public class SuperDemo {
+    public static void main(String[] args) {
+        Dog d = new Dog("Dog");
+        d.display();
+    }
+}
+9. Write a Java program to demonstrate the use of the final keyword with variables, methods, and classes.
+final class College {
+    final int COLLEGE_ID = 101;
+    final void display() {
+        System.out.println("College ID: " + COLLEGE_ID);
+    }
+}
+
+public class FinalDemo {
+    public static void main(String[] args) {
+        College c = new College();
+        c.display();
+        c.COLLEGE_ID = 200;
+    }
+}
+
+6. Write a Java program to demonstrate the use of an inner class and an anonymous class.
+class Outer {
+    private String message = "Welcome to Java Programming";
+    // Inner Class
+    class Inner {
+        void display() {
+            System.out.println("Message: " + message);
+        }
+    }
+}
+
+interface Greeting {
+    void sayHello();
+}
+
+public class InnerAnonymousDemo {
+    public static void main(String[] args) {
+        // Inner Class
+        Outer outer = new Outer();
+        Outer.Inner inner = outer.new Inner();
+        inner.display();
+
+        // Anonymous Class
+        Greeting greet = new Greeting() {
+            public void sayHello() {
+                System.out.println("Hello from Anonymous Class");
+            }
+        };
+        greet.sayHello();
+    }
+}
