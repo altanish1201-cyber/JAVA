@@ -1,0 +1,2 @@
+ID: 101, Name: Alice, Dept: CSE, Salary: 75000
+ID: 102, Name: Bob, Dept: IT, Salary: 68000
